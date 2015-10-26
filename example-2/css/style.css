@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+div{
+    background-color:red;
+    width: 20px;
+    height: 20px;
+    border-radius:10px;
+    
+    /*lets the circles overlap each other*/
+    position:absolute;
+    /*if width of this ever changes, make the chage happen over a 2 second duration, after a .5 second delay */
+    /*transistion: what duration delay ease
+    transition: width .5s 0s ease-out;*/
+}
+
