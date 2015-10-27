@@ -16,6 +16,16 @@ function makeACircle(evt){
     
     //generates a div
     var circ = document.createElement("div");
+    //add styles so it resembles a circle
+    circ.style.width = "10px";
+    circ.style.height = "10px";
+    circ.style.opacity = "1";
+    circ.style.border = "#99F solid 5px";
+    circ.style.position = "absolute";
+    circ.style.borderRadius = "100px";
+    
+    //give it the ability to animate its width if the width value changes
+    circ.style.transition = "width .5s 0s ease-out, height .5s 0s ease-out, opacity 10s 0s ease-out";
     
     //set its horizontal position to that of the cursor
     circ.style.left = evt.clientX+'px';
@@ -24,4 +34,13 @@ function makeACircle(evt){
     circ.style.top = evt.clientY+'px';
     //adds it to the HTML as child of <body>
     document.body.appendChild(circ);
+    
+    //make the circle change after a almost-nonexistant delay
+    setTimeout(function(){    
+        //change the circle, making it bigger and invisible
+        circ.style.width = "100px";
+        circ.style.height = "400px";
+        circ.style.opacity = "0";    
+    },0);
+    
 }
